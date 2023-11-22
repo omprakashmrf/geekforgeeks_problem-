@@ -1,0 +1,21 @@
+def isSymmetric(self, root):
+        # Your Code Here
+         # Your Code Here
+        if root==None:
+            return True
+        if root.left==None and root.right==None:
+            return True
+        if root.left==None or root.right==None:
+            return False
+        def inOrder(r,nodes):
+            if r!=None:
+                inOrder(r.left,nodes)
+                nodes.append(r.data)
+                inOrder(r.right,nodes)
+        
+        left=[]
+        inOrder(root.left,left)
+        right=[]
+        inOrder(root.right,right)
+        right=right[::-1]
+        return left==right
