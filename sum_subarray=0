@@ -1,0 +1,12 @@
+    def subArrayExists(self,arr,n):
+        ##Your code here
+        #Return true or false
+        result= set()
+        count = 0
+        for i in range(n):
+            count += arr[i]
+            if count==0 or count in result:
+                return True
+            
+            result.add(count)
+        return False    
