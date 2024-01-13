@@ -1,0 +1,20 @@
+class Solution:
+    def insertionSort(self, head):
+        #code here
+        lst = []
+        curr = head
+        
+        while curr!= None:
+            lst.append(curr.data)
+            curr = curr.next
+        
+        lst.sort()
+        
+        temp = head
+        i = 0
+        while temp!= None:
+            temp.data= lst[i]
+            i+=1
+            temp= temp.next
+            
+        return head 
