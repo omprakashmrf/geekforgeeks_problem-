@@ -1,0 +1,5 @@
+	def findPeakElement(self, a):
+		# Code here
+		a.sort()
+		higest_element = a[-1]
+		return higest_element
